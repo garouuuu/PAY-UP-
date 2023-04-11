@@ -1,3 +1,2 @@
-This is a plain text file
-
-hello,this is a plain text file from notepad
+This is a plain text file.
+This is a plain text file from notepad.
