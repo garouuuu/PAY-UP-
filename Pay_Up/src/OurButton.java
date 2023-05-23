@@ -6,5 +6,10 @@ public class OurButton extends JButton {
         super(text);
         setBounds(x, y, width, height);
         setBackground(color);
+        
+        
+        ButtonHandler buttonHandler = new ButtonHandler();
+        addActionListener(buttonHandler);
+        
     }
 }

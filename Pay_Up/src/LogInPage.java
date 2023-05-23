@@ -20,14 +20,14 @@ public class LogInPage  {
 	
     public LogInPage() 
     {
-    	frame = new OurFrame("Log in", 100, 100, 400, 700); // Create an instance of OurFrame 
+    	frame = new OurFrame("Log In", 100, 100, 400, 700); // Create an instance of OurFrame 
     	windowLabel = new OurLabel("Ready to PayUp?",110,15,200,100,new Font("Verdana", Font.BOLD, 20));
     	userLabel = new OurLabel("Username:",65, 350, 90, 40,new Font("Verdana", Font.BOLD, 14));
     	passwordLabel = new OurLabel("Password:",65, 420, 90, 40,new Font("Verdana", Font.BOLD, 14));
     	userText = new OurTextField(85, 390, 220, 30);
     	passwordText = new OurTextField(85, 460, 220, 30);
-    	loginButton = new OurButton("Log in",140, 520, 80, 30,new Color(0, 128, 255));
-    	signupButton = new OurButton("Sign Up",140, 570, 80, 30,new Color(0, 204, 102));
+    	loginButton = new OurButton("Σύνδεση",140, 520, 100, 30,new Color(0, 128, 255));
+    	signupButton = new OurButton("Εγγραφή",140, 570, 100, 30,new Color(0, 204, 102));
     	aboutusButton = new OurButton("About us?",270, 610, 105, 30,new Color(255, 255, 102));
     	
     	frame.add(windowLabel);

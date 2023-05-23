@@ -31,10 +31,10 @@ public class IndexPage
     	frame = new OurFrame("Kεντρικό Μενού", 500, 100, 400, 600);
     	windowLabel = new OurLabel("Καλώς ήλθατε!",45,3,300,100,new Font("Verdana", Font.BOLD, 28));
     	b = new OurButton("Λογαριασμός Τρίτου",80,500,215,30,new Color(102, 178, 255));
-        b1 = new OurButton("+",300,290,45,40,new Color(0, 128, 255));
-        b2 = new OurButton("+",300,340,45,40,new Color(0, 128, 255));
-        b3 = new OurButton("+",300,390,45,40,new Color(0, 128, 255));
-        b4 = new OurButton("+",300,440,45,40,new Color(0, 128, 255));
+        b1 = new OurButton("+",300,290,45,40,new Color(0, 128, 255));	//για ρευμα
+        b2 = new OurButton("+",300,340,45,40,new Color(0, 128, 255));	//για νερο
+        b3 = new OurButton("+",300,390,45,40,new Color(0, 128, 255));	//για τηλεφωνο
+        b4 = new OurButton("+",300,440,45,40,new Color(0, 128, 255));	//για δοση
         b5 = new OurButton("Μενού",300,20,80,30,new Color(255, 255, 102));
         
     	panel = new JPanel();  

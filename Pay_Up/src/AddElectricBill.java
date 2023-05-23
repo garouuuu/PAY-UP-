@@ -2,7 +2,7 @@
 import java.awt.*;    
 import javax.swing.*;    
     
-public class AddElectricBill  
+public class AddElectricBill extends JButton
 {    
 	static OurFrame frame;
 	static OurLabel windowLabel;
@@ -20,15 +20,22 @@ public class AddElectricBill
 	static OurButton b11;
 	static OurTextField t1;
 	
+	static DltButton deleteButton;
+
 	  
 	// constructor    
 	public AddElectricBill()  
 	{    
 		
+
+   	 // Load the delete icon image from the src directory (for the bin icon)
+       ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+       ImageIcon binIcon = new ImageIcon(classLoader.getResource("bin3.png"));
+		
 		frame = new OurFrame("Προσθήκη Λογαριασμού Ρεύματος", 500, 100, 400, 600);
 	    windowLabel = new OurLabel("Προσθήκη Λογαριασμού Ρεύματος",15,5,500,100,new Font("Verdana", Font.BOLD, 19));
 	    label1 = new OurLabel("Αριθμός Παροχής",102,300,160,30,new Font("Verdana", Font.BOLD, 16));
-	
+	    deleteButton = new DltButton(binIcon);
 		
 		b1 = new OurButton("NRG",20,100,80,25,new Color(102,204, 0));
 		b6 = new OurButton("Ήρων",110,100,80,25,new Color(102, 204, 0));
@@ -62,9 +69,10 @@ public class AddElectricBill
 	    frame.add(b10);
 	    frame.add(b11);
 	    frame.add(t1);
+	    frame.add(deleteButton);
+	 
 	    
-	    
-	   	    
+  
 	    frame.setVisible(true); // Exhibit the frame 
 	    
 	    

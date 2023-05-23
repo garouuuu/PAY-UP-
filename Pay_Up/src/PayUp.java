@@ -14,6 +14,7 @@ public class PayUp {
 		//PayPhoneBill payPhoBill = new PayPhoneBill();
 		//PayWaterBill payWatBill  = new PayWaterBill();
 		IndexPage indexpage = new IndexPage();	
+		//AboutUsPage aboutUs = new AboutUsPage();
 		
 	}
 

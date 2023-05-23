@@ -11,7 +11,7 @@ public class AddInstallment
 	static OurLabel label3; 
 	static OurButton b1;
 	static OurButton b2;
-	
+	static DltButton deleteButton;
 	static OurTextField t1;
 	static OurTextField t2;
 
@@ -33,7 +33,13 @@ public class AddInstallment
 
 	    b1 = new OurButton("Υποβολή",140,350,90,30,new Color(0, 204, 102));
 		b2 = new OurButton("Πίσω",10,500,90,40,new Color(0, 128, 255));
-	    
+		
+		
+		// Load the delete icon image from the src directory (for the bin icon)
+	    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+	    ImageIcon binIcon = new ImageIcon(classLoader.getResource("bin3.png"));
+		
+	    deleteButton = new DltButton(binIcon);
 	  
 	    frame.add(windowLabel);
 	    frame.add(label1);
@@ -44,7 +50,7 @@ public class AddInstallment
 	    frame.add(t2);
 	    frame.add(b1);
 	    frame.add(b2);
-	    
+	    frame.add(deleteButton);
 	    
 	    frame.setVisible(true);    
 	}    

@@ -13,6 +13,7 @@ public class AddPhoneBill
 	static OurButton b3;
 	static OurButton b4;
 	static OurButton b5;
+	static DltButton deleteButton;
 	
 	  
 	// constructor    
@@ -27,7 +28,13 @@ public class AddPhoneBill
 		b3 = new OurButton("Nova",250,100,95,30,new Color(102,204, 0));
 		b4 = new OurButton("Υποβολή",140,330,90,30,new Color(0, 204, 102));
 		b5 = new OurButton("Πίσω",10,500,90,40,new Color(0, 128, 255));
-	   
+		
+		
+		// Load the delete icon image from the src directory (for the bin icon)
+	    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+	    ImageIcon binIcon = new ImageIcon(classLoader.getResource("bin3.png"));
+		
+	    deleteButton = new DltButton(binIcon);
 	
 	    frame.add(windowLabel);
 	    frame.add(label1);
@@ -37,7 +44,7 @@ public class AddPhoneBill
 	    frame.add(b3);
 	    frame.add(b4);
 	    frame.add(b5);
-	    
+	    frame.add(deleteButton);
 	    
 	    frame.setVisible(true);    
 	}    

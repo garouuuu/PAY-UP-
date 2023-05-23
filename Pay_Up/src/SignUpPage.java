@@ -32,12 +32,12 @@ public class SignUpPage
 	{
         
 		frame = new OurFrame("Sign Up", 500, 100, 400, 700); // Create an instance of OurFrame 
-		windowLabel = new OurLabel("Enter your credentials",73,5,300,100,new Font("Verdana", Font.BOLD, 20));
-		fNameLabel = new OurLabel("First Name",20, 100, 130, 40,new Font("Verdana", Font.BOLD, 14));		
-		lNameLabel = new OurLabel("Last Name",200, 100, 130, 40,new Font("Verdana", Font.BOLD, 14));
+		windowLabel = new OurLabel("Συμπλήρωσε τα στοιχεία σου",40,5,350,100,new Font("Verdana", Font.BOLD, 20));
+		fNameLabel = new OurLabel("Όνομα",20, 100, 130, 40,new Font("Verdana", Font.BOLD, 14));		
+		lNameLabel = new OurLabel("Επίθετο",200, 100, 130, 40,new Font("Verdana", Font.BOLD, 14));
 		emailLabel = new OurLabel("Email",20, 200, 130, 40,new Font("Verdana", Font.BOLD, 14));
-		passwordLabel = new OurLabel("Password",20, 300, 130, 40,new Font("Verdana", Font.BOLD, 14));
-		confirmPasLabel  = new OurLabel("Confirm Password",20, 400, 160, 40,new Font("Verdana", Font.BOLD, 14));
+		passwordLabel = new OurLabel("Κωδικός",20, 300, 130, 40,new Font("Verdana", Font.BOLD, 14));
+		confirmPasLabel  = new OurLabel("Επιβεβαίωση Κωδικού",20, 400, 200, 40,new Font("Verdana", Font.BOLD, 14));
 		
 		fNameText = new OurTextField(20, 130, 160, 30);
 		lNameText = new OurTextField(200, 130, 170, 30);
@@ -45,8 +45,8 @@ public class SignUpPage
 		passwordText = new OurTextField(20, 330, 350, 30);
 		confirmPasText = new OurTextField(20, 430, 350, 30);
 		
-		nextButton = new OurButton("Next",280, 530, 90, 40,new Color(0, 204, 102));
-		backButton = new OurButton("Back",20, 530, 90, 40,new Color(0, 128, 255));
+		nextButton = new OurButton("Επόμενο",280, 530, 90, 40,new Color(0, 204, 102));
+		backButton = new OurButton("Πίσω",20, 530, 90, 40,new Color(0, 128, 255));
     	
 		
 		
