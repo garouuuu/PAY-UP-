@@ -1,5 +1,11 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
 
 public class ButtonHandler implements ActionListener {
    
@@ -16,8 +22,18 @@ public class ButtonHandler implements ActionListener {
 	static PayInstallment payInstP;
 	static PayPhoneBill payPhoP;
 	static PayWaterBill payWatP;
-	
+	static Connection connection;
 		
+	public ButtonHandler() {
+        // Connect to the database
+        try {
+            connection = DatabaseConnection.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+	
+	
 	
 	@Override
     public void actionPerformed(ActionEvent e) {
@@ -28,9 +44,36 @@ public class ButtonHandler implements ActionListener {
     	//For the buttons in LogInPage**********************************************
         if (o == LogInPage.loginButton) 
         {
+        	 String username = LogInPage.userText.getText();
+             String password = LogInPage.passwordText.getText();
+        	
+             try {
+                 String query = "SELECT * FROM user WHERE username = ? AND password = ?";
+                 PreparedStatement preparedStatement = connection.prepareStatement(query);
+                 preparedStatement.setString(1, username);
+                 preparedStatement.setString(2, password);
+                 ResultSet resultSet = preparedStatement.executeQuery();
+
+                 if (resultSet.next()) {
+                     // Login successful, proceed to index page
+                     indexP = new IndexPage();
+                     LogInPage.frame.dispose(); // Close the login page
+                 } else {
+                     // Login failed, display an error message
+                     System.out.println("Login failed");
+                     PopupMessage popup = new PopupMessage(LogInPage.frame,"Ο λογαριασμός με αυτά τα στοιχεία δεν υπάρχει");
+                 }
+
+                 resultSet.close();
+                 preparedStatement.close();
+             } catch (SQLException ex) {
+                 ex.printStackTrace();
+             }
+        	
+        /*	
         	indexP = new IndexPage();
         	LogInPage.frame.dispose();	// Close the login page
-            
+        */    
         } else if (o == LogInPage.signupButton) 
         {
     		signUpP = new SignUpPage();

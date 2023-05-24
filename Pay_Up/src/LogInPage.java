@@ -53,7 +53,7 @@ public class LogInPage  {
         
    
         frame.setVisible(true); // Exhibit the frame  
-    
+  
     }
 
     
