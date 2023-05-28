@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-
 public class ButtonHandler implements ActionListener {
    
 	static SignUpPage signUpP;
@@ -23,6 +22,8 @@ public class ButtonHandler implements ActionListener {
 	static PayPhoneBill payPhoP;
 	static PayWaterBill payWatP;
 	static Connection connection;
+	static SideMenu sMenuPage;
+	
 		
 	public ButtonHandler() {
         // Connect to the database
@@ -142,6 +143,11 @@ public class ButtonHandler implements ActionListener {
         	IndexPage.frame.dispose();
         	
         }
+        else if(o==IndexPage.b5)
+        {
+        	sMenuPage= new SideMenu();
+        	IndexPage.frame.dispose();
+        }
         
         
         
@@ -231,8 +237,25 @@ public class ButtonHandler implements ActionListener {
         	
         }
         
+       //For the buttons in SideMenu****************************************************
+        if(o == SideMenu.clicked1) {
+        	bankAccP= new AddBankAccount();
+        	SideMenu.menuframe.dispose();
+        	
+        }else if(o==SideMenu.clicked2) {
+        	signUpP= new SignUpPage();
+        	SideMenu.menuframe.dispose();
+        	
+        }else if(o== SideMenu.clicked3) {
+        	aboutusP= new AboutUsPage();
+        	SideMenu.menuframe.dispose();
+        	
+        }else if(o== SideMenu.clicked4) {
+        	logInP= new LogInPage();
+        	SideMenu.menuframe.dispose();
+        }
         
         
         
-    }
+	}
 }
