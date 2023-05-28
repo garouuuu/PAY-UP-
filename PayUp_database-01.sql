@@ -1,9 +1,7 @@
-για είσοδο στο mariaDb: mysql -h localhost -u root
 
 DROP DATABASE IF EXISTS tl_database;
 create database tl_database;
 USE tl_database;
-(ένα ένα τα tables γτ όλα μαζί δν θα τα πάρει)
 
 CREATE TABLE user
 (
