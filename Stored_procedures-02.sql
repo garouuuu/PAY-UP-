@@ -1,4 +1,5 @@
 ----------------------------------------------------------------------
+/*1*/
 /*procedure για εισαγωγη εγγραφης στον πινακα b_user*/
 DROP PROCEDURE IF EXISTS addUser;
 DELIMITER $
@@ -11,6 +12,7 @@ DELIMITER ;
 CALL addUser('username', 'usernam', 'userna', 'usern', 'user@users.com');	/*κληση της procedure*/
 SELECT * FROM b_user;														/*εμφανιση του περιεχομενου του πινακα*/
 -------------------------------------------------------------------------------------------------------------------------
+/*2*/
 /*procedure για διαγραφη εγγραφης απο τον πινακα b_user*/
 DROP PROCEDURE IF EXISTS deleteUser;
 DELIMITER $
@@ -25,6 +27,7 @@ CALL deleteUser('userna', 'user@users.com');
 /*Αν εγινε σωστα η διαγραφη πρεπει να μην υπάρχει πια η εγγραφή*/
 SELECT * FROM b_user
 ---------------------------------------------------------------------------------------------------------------------------------------
+/*3*/
 /*procedure που ελεγχει αν παιρνοντας ονομα,επιθετο απο τον πινακα b_user αυτα αντιστοιχουν σε καποιον αριθμο παροχης στον πινακα provider*/
 DROP PROCEDURE IF EXISTS check_prov;
 DELIMITER $
@@ -39,7 +42,8 @@ CREATE PROCEDURE check_prov(IN fnme VARCHAR(45), IN lnme VARCHAR(45), IN mail VA
 	END$
 DELIMITER ;
 -------------------------------------------------------------------------
-/*procedure pou pairnei apo payment to pio prosfato se hmeromhnia payment number kai elegxei an antistoixei sto provider number*/
+/*4*/
+/*procedure που παιρνει απο τον πινακα payment το πιο προσφατο σε ημερομηνια payment number και ελεγχει αν αντιστοιχει στο provider number*/
 DROP PROCEDURE IF EXISTS latest_date;
 DELIMITER $
 CREATE PROCEDURE latest_date(IN pay_num INT)
@@ -52,5 +56,3 @@ CREATE PROCEDURE latest_date(IN pay_num INT)
 		END IF;
 END$
 DELIMITER ;
---------------------------------------------------------------------------
-/*!!!!!MENEI PROCEDURE GIA NA ELEGXEI TA TRAPEZIKA STOIXEIA TOU XRHSTH OTAN TA EISAGEI STHN EFARMOGH!!!!!!!!!!!!*/
