@@ -1,7 +1,3 @@
-/*για είσοδο στο mariaDb: mysql -h localhost -u root ή*/
-/*mysql -u root*/
-/*ctrl + c για έξοδο*/
-
 DROP DATABASE IF EXISTS tl_database;
 CREATE DATABASE tl_database;
 USE tl_database;
