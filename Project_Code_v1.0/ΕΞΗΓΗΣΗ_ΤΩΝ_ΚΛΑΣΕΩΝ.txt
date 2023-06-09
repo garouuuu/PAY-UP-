@@ -1,0 +1,50 @@
+Μεθοδοι για τις UI:
+OurButton
+OurLabel
+OurTextField
+OurFrame
+AdvancedTextField
+
+Χειριστης των βασικων κουμπιων:
+ButtonHandler
+
+Εισαγωγικη σελιδα (εναρκτηρια):
+PayUp
+
+Διεπαφες:
+LogInPage
+SignUpPage
+IndexPage
+AddElectricBill
+AddWaterBill
+AddPhoneBill
+AddInstallment
+PayElectricBill
+PayPhoneBill
+PayWaterBill
+PayInstallment
+Pay3thChooseBill
+Pay3thElectric
+Pay3thWater
+Pay3thPhone
+AdoutUsPage
+
+Μηνυματα:
+PopupMessage
+
+Μεθοδοι:
+dropDown //δεν λειτουργει ειναι ενδικτικο
+payElectric //δεν λειτουργει ειναι ενδικτικο
+payWater /δεν λειτουργει ειναι ενδικτικο
+payPhone //δεν λειτουργει ειναι ενδικτικο
+pay //για installment - δεν λειτουργει ειναι ενδικτικο
+addElectric
+addWater
+addPhone
+add //για installment
+addAccount
+card //δεν την εχουμε γραψει αλλα μονο αναφερει στις μεθοδους pay. Προοριζοταν για να παιρνει το αριθμο της καρτας απο ενα drop down μενου και να βρισκει το τρεχον ποσο που εχει η καρτα     μεσα και να εκτελει την αφαιρεση του τρεχον ποσου με το ποσο που δηλωση ο χρηστης πως θελει να πληρωσει (new_amount=current_amount - amount) και να αποθηκευει το νεο ποσο ως τρεχον στην βαση (new_amount=current_amount) 
+
+Συνδεση με την βαση:
+DatabaseConnection
+
